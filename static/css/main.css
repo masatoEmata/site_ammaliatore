@@ -1,0 +1,106 @@
+.logo {
+  height: 50px;
+  margin-bottom: 10PX;
+}
+div.headline {
+    display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+}
+hr.headline {
+    background-color: #89D5E3;
+      border: 1px solid #89D5E3;
+      width: 100%;
+}
+span.headline {
+    display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: right;
+      color: #89D5E3;
+      font-size: 24px;
+}
+/* bootstrapの上書き */
+.featurette-heading {
+  margin-top: 0rem;
+}
+/* h2 {
+  color: #1B365C;
+} */
+.bg-navy {
+  background-color: #1B365C!important;
+}
+/* .text-navy {
+  color: #1B365C;
+} */
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #E389AF;
+  --bs-btn-border-color: #E389AF;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #c76c92;
+  --bs-btn-hover-border-color: #c76c92;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #c76c92;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #E389AF;
+  --bs-btn-disabled-border-color: #E389AF;
+  }
+
+.btn-primary.content {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #89D5E3;
+  --bs-btn-border-color: #89D5E3;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6eadb8;
+  --bs-btn-hover-border-color: #6eadb8;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6eadb8;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #89D5E3;
+  --bs-btn-disabled-border-color: #89D5E3;
+}
+.featurette-divider {
+  border: none;
+}
+a.btn.btn-primary {
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 777px) {
+  .carousel-item {
+    height: 40rem!important;
+  }
+  .carousel-caption {
+    bottom: 10rem;
+  }
+}
+@media only screen and (max-width: 777px) {
+  .logo {
+    height: 30px;
+  }
+  .carousel-item {
+    height: 100%;
+  }
+  .carousel-caption {
+    bottom: 0rem;
+  }
+}
+
