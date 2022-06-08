@@ -27,6 +27,8 @@ span.headline {
       color: #89D5E3;
       font-size: 24px;
 }
+
+
 /* bootstrapの上書き */
 .featurette-heading {
   margin-top: 0rem;
@@ -35,7 +37,7 @@ span.headline {
   color: #1B365C;
 } */
 .bg-navy {
-  background-color: #1B365C!important;
+  background-color: #1B365C;
 }
 /* .text-navy {
   color: #1B365C;
