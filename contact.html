@@ -111,5 +111,32 @@
      </main>
 
   </div>
+
+
+  <script>
+    // form validator
+    (function(){
+      const button = document.querySelector("select[name=user_contents]");
+      button.addEventListener('click', event => {
+        let mail = getMail()
+        if (! mail) {
+          alert("メールアドレスを入力してください。");
+          return
+        }
+        if (! isValidMail(mail)) {
+          alert("メールアドレスの形式を確認してください。")
+          return
+        }
+      });
+  
+      function getMail() {
+          return  document.querySelector("input[name=user_mail]").value;
+        }
+      function isValidMail(mail) {
+        return mail.match(/^[a-zA-Z0-9_+-]+(.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/);
+      }
+    });
+  </script>
+
 </body>
 </html>
