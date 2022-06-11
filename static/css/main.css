@@ -38,8 +38,8 @@ span.headline {
 }
 
 .cardInnerWrapper {
-  padding: 1%;
-  height: 99%;
+  padding: 2%;
+  /* height: 99%; */
 }
 .visual-blur {
   filter: brightness(70%) blur(1px);
@@ -117,6 +117,11 @@ a {
 }
 a.btn.btn-primary {
   margin-bottom: 5px;
+}
+.card-anti {
+  --bs-card-bg: transparent;
+  --bs-card-spacer-x: 0rem;
+  --bs-card-border-width: 0px;
 }
 @media only screen and (min-width: 777px) {
   .carousel-item {
