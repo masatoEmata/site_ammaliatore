@@ -12,8 +12,8 @@ div.headline {
       flex-direction: row;
 }
 hr.headline {
-    background-color: #89D5E3;
-      border: 1px solid #89D5E3;
+    background-color: #63CEE0;
+      border: 1px solid #63CEE0;
       width: 100%;
 }
 span.headline {
@@ -24,11 +24,11 @@ span.headline {
       -ms-flex-align: center;
       align-items: center;
       text-align: right;
-      color: #89D5E3;
+      color: #63CEE0;
       font-size: 24px;
 }
 .fill-sky {
-  fill: #89D5E3;
+  fill: #63CEE0;
 }
 .fill-yellow {
   fill: rgba(227, 208, 137, 1);
@@ -91,14 +91,14 @@ a {
   }
 
 .btn-secondary {
-  --bs-btn-bg: #89D5E3;
-  --bs-btn-border-color: #89D5E3;
+  --bs-btn-bg: #63CEE0;
+  --bs-btn-border-color: #63CEE0;
   --bs-btn-hover-bg: #6eadb8;
   --bs-btn-hover-border-color: #6eadb8;
   --bs-btn-active-bg: #6eadb8;
   --bs-btn-active-border-color: #6eadb8;
-  --bs-btn-disabled-bg: #89D5E3;
-  --bs-btn-disabled-border-color: #89D5E3;
+  --bs-btn-disabled-bg: #63CEE0;
+  --bs-btn-disabled-border-color: #63CEE0;
 }
 .btn-tertiary {
   --bs-btn-bg: rgba(227, 208, 137, 1);
