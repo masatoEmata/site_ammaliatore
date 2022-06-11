@@ -1,3 +1,10 @@
+.vertical-line {
+  border-left: 2px solid #63CEE0;
+  width: 225px;
+}
+.centerboxwrapper {
+  text-align: -webkit-center;
+}
 .logo {
   height: 50px;
   margin-bottom: 10PX;
@@ -122,6 +129,9 @@ a.btn.btn-primary {
   --bs-card-bg: transparent;
   --bs-card-spacer-x: 0rem;
   --bs-card-border-width: 0px;
+}
+.blockquote-footer::before {
+  content: "";
 }
 @media only screen and (min-width: 777px) {
   .carousel-item {
