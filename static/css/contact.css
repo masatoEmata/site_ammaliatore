@@ -33,4 +33,11 @@ input[type="submit"]{
  color: #ffffff;
  padding: 15px 80px;
  text-align: center;
-} 
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+::placeholder {
+  color: #cccccc;
+}
