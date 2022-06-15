@@ -136,6 +136,9 @@ a.btn.btn-primary {
 .blockquote-footer::before {
   content: "";
 }
+.navbar {
+  --bs-navbar-padding-y: 0.25rem;
+}
 @media only screen and (min-width: 777px) {
   .carousel-item {
     height: 40rem!important;
