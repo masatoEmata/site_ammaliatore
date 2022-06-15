@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/contact.css">
     <title>相談・体験する</title>
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 <body>
   <div id="contact">
@@ -68,21 +69,21 @@
    <main>
 
      <div class="innerWrap">
-        <form action="" method="">
+        <form class="formrun" action="https://form.run/api/v1/r/72owxtf3dnh4a9tym2bgsh6d" method="post">
         <section class="inquiry-info">
           <h2>問い合わせ情報</h2>
           <p>
             ご希望
-            <select name="user_contents">
+            <select name="inquiry_about">
               <option value=""> </option>
               <option value="見学">見学</option>
               <option value="無料体験">無料体験</option>
               <option value="相談">相談</option>
              </select>
              </p>
-          <p>メールアドレス<input type="email" name="user_mail"></p>
+          <p>メールアドレス<input type="email" name="inquiry_mail" data-formrun-type="email" data-formrun-required></p>
           <p>
-            お問い合わせ内容<textarea name="message" placeholder="次回いつ見学できますか？" value="次回いつ見学できますか？"></textarea>
+            お問い合わせ内容<textarea name="inquiry_message" placeholder="次回いつ見学できますか？" value="次回いつ見学できますか？"></textarea>
           </p>
         </section>
 
@@ -90,8 +91,8 @@
 
         <section class="children-info">
           <h2>お子さんの情報</h2>
-          <p>お名前<input type="text" name="user_name"></p>
-          <p>フリガナ<input type="text" name="user_kana"></p>
+          <p>お名前<input type="text" name="child_name"></p>
+          <p>フリガナ<input type="text" name="child_kana"></p>
           <p>
             性別
             <select name="user_sex">
@@ -102,7 +103,7 @@
           </p>
           <p>
             現学年
-            <select name="user_school_year">
+            <select name="child_school_year">
               <option value=""> </option>
               <option value="未就学">未就学</option>
               <option value="１年生">１年生</option>
@@ -143,7 +144,7 @@
           await delay(1);
           var isPrimary = Boolean(document.location.search.match(/pre_school/));
           if (isPrimary){
-            document.querySelector("select[name=user_school_year]").value = "未就学";
+            document.querySelector("select[name=child_school_year]").value = "未就学";
           }
         }
       })();
@@ -163,7 +164,7 @@
         });
     
         function getMail() {
-            return  document.querySelector("input[name=user_mail]").value;
+            return  document.querySelector("input[name=inquiry_mail]").value;
           }
         function isValidMail(mail) {
           return mail.match(/^[a-zA-Z0-9_+-]+(.[a-zA-Z0-9_+-]+)*@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/);
