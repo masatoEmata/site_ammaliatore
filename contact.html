@@ -118,7 +118,7 @@
 
         <hr class="featurette-divider">
 
-        <p class="btn btn-primary" href="#">送信する</p>
+        <button class="btn btn-primary" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信する</button>
       </form>
 
    </div>
@@ -186,7 +186,7 @@
       }
       const main = () => {
         let childrenInfoElm = document.querySelector('.children-info');
-        let element = document.querySelector('select[name=user_contents]');
+        let element = document.querySelector('select[name=inquiry_about]');
         let opt = option(element);
         if (opt == '相談') {
           displayNone(childrenInfoElm);
