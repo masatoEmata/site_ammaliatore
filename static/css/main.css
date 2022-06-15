@@ -161,5 +161,8 @@ a.btn.btn-primary {
   .carousel-caption .text-white {
     margin-bottom: 8px;
   }
+  a:nth-child(2).btn.btn-secondary {
+    margin: 2px;
+  }
 }
 
