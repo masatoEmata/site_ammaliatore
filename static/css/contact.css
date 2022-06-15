@@ -22,7 +22,6 @@ main {
  }
 textarea {
   height: 140px;
-  margin-bottom: 20px;
  }
 select{
   background: #ffffff url(../img/icon/down_arrow.jpeg) no-repeat 98% 50%/14px 10px;

@@ -69,48 +69,55 @@
 
      <div class="innerWrap">
         <form action="" method="">
-        <h2>お子さんの情報</h2>
-        <p>お名前<input type="text" name="user_name"></p>
-        <p>フリガナ<input type="text" name="user_kana"></p>
-        <p>
-          性別
-          <select name="user_sex">
-           <option value="男">男子</option>
-           <option value="女">女子</option>
-           <option value="指定しない">指定しない</option>
-          </select>
-         </p>
-        <p>
-          現学年
-          <select name="user_school_year">
-            <option value=""> </option>
-            <option value="未就学">未就学</option>
-            <option value="１年生">１年生</option>  
-            <option value="２年生">２年生</option>  
-            <option value="３年生">３年生</option>
-            <option value="４年生">４年生</option>
-            <option value="５年生">５年生</option>
-            <option value="６年生">６年生</option>
-            </select>
-           </p>
+        <section class="inquiry-info">
+          <h2>問い合わせ情報</h2>
+          <p>
+            ご希望
+            <select name="user_contents">
+              <option value=""> </option>
+              <option value="見学">見学</option>
+              <option value="無料体験">無料体験</option>
+              <option value="相談">相談</option>
+             </select>
+             </p>
+          <p>メールアドレス<input type="email" name="user_mail"></p>
+          <p>
+            お問い合わせ内容<textarea name="message" placeholder="次回いつ見学できますか？" value="次回いつ見学できますか？"></textarea>
+          </p>
+        </section>
+
         <hr class="featurette-divider">
-        <h2>問い合わせ情報</h2>
-        <p>メールアドレス<input type="email" name="user_mail"></p>
-        <p>
-          ご希望
-          <select name="user_contents">
-            <option value=""> </option>
-            <option value="見学">見学</option>
-            <option value="無料体験">無料体験</option>
-            <option value="相談">相談</option>
-           </select>
-           </p>
-        <p>
-          お問い合わせ内容<textarea name="message" placeholder="次回いつ見学できますか？" value="次回いつ見学できますか？"></textarea>
-        </p>
-        <p>
-          <p class="btn btn-primary" href="#">送信する</p>
-        </form>
+
+        <section class="children-info">
+          <h2>お子さんの情報</h2>
+          <p>お名前<input type="text" name="user_name"></p>
+          <p>フリガナ<input type="text" name="user_kana"></p>
+          <p>
+            性別
+            <select name="user_sex">
+              <option value="男">男子</option>
+              <option value="女">女子</option>
+              <option value="指定しない">指定しない</option>
+            </select>
+          </p>
+          <p>
+            現学年
+            <select name="user_school_year">
+              <option value=""> </option>
+              <option value="未就学">未就学</option>
+              <option value="１年生">１年生</option>
+              <option value="２年生">２年生</option>
+              <option value="３年生">３年生</option>
+              <option value="４年生">４年生</option>
+              <option value="５年生">５年生</option>
+              <option value="６年生">６年生</option>
+            </select>
+          </p>
+        </section>
+
+        <hr class="featurette-divider">
+
+        <p class="btn btn-primary" href="#">送信する</p>
       </form>
 
    </div>
@@ -134,7 +141,7 @@
 
         async function setDefaultValue() {
           await delay(1);
-          var isPrimary = Boolean(document.location.search.match(/primary_school/));
+          var isPrimary = Boolean(document.location.search.match(/pre_school/));
           if (isPrimary){
             document.querySelector("select[name=user_school_year]").value = "未就学";
           }
@@ -163,7 +170,43 @@
         }
       });
     });
-  </script>
+
+    (function(){
+      let count = 0;
+
+      const option = (elm) => {
+        return elm.selectedOptions[0].value;
+      }
+      const displayNone = (elm) => {
+        elm.style.display = 'none'
+      }
+      const display = (elm) => {
+        elm.style.display = 'block'
+      }
+      const main = () => {
+        let childrenInfoElm = document.querySelector('.children-info');
+        let element = document.querySelector('select[name=user_contents]');
+        let opt = option(element);
+        if (opt == '相談') {
+          displayNone(childrenInfoElm);
+        }
+        else {
+          display(childrenInfoElm);
+        }
+      }
+
+      const countUp = () => {
+        console.log(count++);
+        main();
+      }
+      const intervalId = setInterval(() => {
+        countUp();
+        if (count > 100) {
+          clearInterval(intervalId);　//intervalIdをclearIntervalで指定している
+        }
+      }, 1500);
+    })();
+</script>
   
   </body>
 </html>
